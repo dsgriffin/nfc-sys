@@ -1,3 +1,6 @@
+#![crate_name = "nfc_sys"]
+#![crate_type = "dylib"]
+
 extern crate libc;
 
 use libc::{uint8_t, uint32_t, size_t};
@@ -232,7 +235,7 @@ impl ::std::default::Default for Struct_Unnamed16 {
 }
 pub type nfc_target = Struct_Unnamed16;
 
-#[link(name = "nfc-sys", kind = "dylib")]
+#[link(name = "nfc", kind = "dylib")]
 extern "C" {
     pub fn nfc_init(context: *mut *mut nfc_context);
     pub fn nfc_exit(context: *mut nfc_context);
