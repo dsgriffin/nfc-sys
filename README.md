@@ -4,7 +4,7 @@
 
 `nfc-sys` provides FFI bindings to [libnfc](https://github.com/nfc-tools/libnfc).
 
-Following the `*-sys` package conventions, the `nfc-sys` package does not define higher-level abstractions over the native library.
+Following the `*-sys` package conventions, the `nfc-sys` package does not define higher-level abstractions over the native library; for a safe implementation, see [nfc](https://github.com/dsgriffin/nfc).
 
 ## Installation
 
@@ -29,7 +29,7 @@ Install `libnfc` (e.g. [Debian/Ubuntu](http://nfc-tools.org/index.php?title=Libn
     fn main() {
         unsafe {
             let slice = CStr::from_ptr(nfc_version());
-            println!("libnfc version: {}", slice.to_str().unwrap()); // o: libnfc version: libnfc-1.7.1-79-ge23f8a9
+            println!("libnfc version: {}", slice.to_str().unwrap());
         }
     }
     
