@@ -1,5 +1,6 @@
-#![crate_name = "nfc_sys"]
-#![crate_type = "dylib"]
+#![allow(dead_code, non_camel_case_types, non_upper_case_globals, non_snake_case)]
+
+#[link(name = "nfc_sys", kind = "dylib")]
 
 extern crate libc;
 
