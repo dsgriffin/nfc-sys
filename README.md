@@ -14,25 +14,32 @@ Install `libnfc` (e.g. [Debian/Ubuntu](http://nfc-tools.org/index.php?title=Libn
 
     [dependencies]
     libc = "0.2.0"
-    nfc-sys = "0.1.3"
+    nfc-sys = "0.1.4"
     
 ## Example Usage
 
-#### // main.rs    
-    extern crate libc;
-    extern crate nfc_sys;
+#### // main.rs
+```rust
+extern crate nfc_sys;
+
+use ::std::ffi::CStr;
+
+fn main() {
+    unsafe {
+         // Create new Context and initialize libnfc
+         let mut context = nfc_sys::nfc_context_new();
+         nfc_sys::nfc_init(&mut context);
     
-    use nfc_sys::nfc_version;
-    use std::ffi::CStr;
-    use std::str;
+         if context.is_null() {
+             println!("Unable to initialize new nfc context");
+         }
     
-    fn main() {
-        unsafe {
-            let slice = CStr::from_ptr(nfc_version());
-            println!("libnfc version: {}", slice.to_str().unwrap());
-        }
+         let version = CStr::from_ptr(nfc_sys::nfc_version()).to_str().unwrap();
+    
+         println!("libnfc version: {:?}", version);
     }
-    
+}
+```    
 ## Contributing
     
 I'm brand new to Rust so any help or constructive information would be really appreciated. Thanks in advance!    
