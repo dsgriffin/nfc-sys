@@ -284,17 +284,16 @@ impl ::std::default::Default for Union_Unnamed11 {
 pub type nfc_target_info = Union_Unnamed11;
 #[derive(Copy, Clone)]
 #[repr(u32)]
-pub enum Enum_Unnamed12 {
+pub enum nfc_baud_rate {
     NBR_UNDEFINED = 0,
     NBR_106 = 1,
     NBR_212 = 2,
     NBR_424 = 3,
     NBR_847 = 4,
 }
-pub type nfc_baud_rate = Enum_Unnamed12;
 #[derive(Copy, Clone)]
 #[repr(u32)]
-pub enum Enum_Unnamed13 {
+pub enum nfc_modulation_type {
     NMT_ISO14443A = 1,
     NMT_JEWEL = 2,
     NMT_ISO14443B = 3,
@@ -304,7 +303,6 @@ pub enum Enum_Unnamed13 {
     NMT_FELICA = 7,
     NMT_DEP = 8,
 }
-pub type nfc_modulation_type = Enum_Unnamed13;
 #[derive(Copy, Clone)]
 #[repr(u32)]
 pub enum Enum_Unnamed14 { N_TARGET = 0, N_INITIATOR = 1, }
