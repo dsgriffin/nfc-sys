@@ -345,7 +345,7 @@ extern "C" {
     pub fn nfc_exit(context: *mut nfc_context);
     pub fn nfc_register_driver(driver: *const nfc_driver) -> ::std::os::raw::c_int;
 
-    pub fn nfc_open(context: *mut nfc_context, connstring: nfc_connstring) -> *mut nfc_device;
+    pub fn nfc_open(context: *mut nfc_context, connstring: *const nfc_connstring) -> *mut nfc_device;
     pub fn nfc_close(pnd: *mut nfc_device);
     pub fn nfc_abort_command(pnd: *mut nfc_device) -> ::std::os::raw::c_int;
     pub fn nfc_list_devices(context: *mut nfc_context, connstrings: *mut nfc_connstring, connstrings_len: size_t) -> size_t;
