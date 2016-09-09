@@ -151,7 +151,7 @@ impl ::std::default::Default for Struct_Unnamed3 {
     fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type nfc_dep_info = Struct_Unnamed3;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_Unnamed4 {
     pub abtAtqa: [uint8_t; 2usize],
@@ -168,7 +168,7 @@ impl ::std::default::Default for Struct_Unnamed4 {
     fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type nfc_iso14443a_info = Struct_Unnamed4;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy, Clone)]
 pub struct Struct_Unnamed5 {
     pub szLen: size_t,
@@ -181,7 +181,7 @@ impl ::std::default::Default for Struct_Unnamed5 {
     fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type nfc_felica_info = Struct_Unnamed5;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy, Clone)]
 pub struct Struct_Unnamed6 {
     pub abtPupi: [uint8_t; 4usize],
@@ -193,7 +193,7 @@ impl ::std::default::Default for Struct_Unnamed6 {
     fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type nfc_iso14443b_info = Struct_Unnamed6;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_Unnamed7 {
     pub abtDIV: [uint8_t; 4usize],
@@ -209,7 +209,7 @@ impl ::std::default::Default for Struct_Unnamed7 {
     fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type nfc_iso14443bi_info = Struct_Unnamed7;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy, Clone)]
 pub struct Struct_Unnamed8 {
     pub abtUID: [uint8_t; 8usize],
@@ -218,7 +218,7 @@ impl ::std::default::Default for Struct_Unnamed8 {
     fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type nfc_iso14443b2sr_info = Struct_Unnamed8;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy, Clone)]
 pub struct Struct_Unnamed9 {
     pub abtUID: [uint8_t; 4usize],
@@ -229,7 +229,7 @@ impl ::std::default::Default for Struct_Unnamed9 {
     fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type nfc_iso14443b2ct_info = Struct_Unnamed9;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy, Clone)]
 pub struct Struct_Unnamed10 {
     pub btSensRes: [uint8_t; 2usize],
@@ -239,7 +239,7 @@ impl ::std::default::Default for Struct_Unnamed10 {
     fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type nfc_jewel_info = Struct_Unnamed10;
-#[repr(C)]
+#[repr(C, packed)]
 //#[derive(Copy, Clone)]
 pub struct Union_Unnamed11 {
     pub _bindgen_data_: [u8; 283usize],
@@ -317,7 +317,7 @@ impl ::std::default::Default for Struct_Unnamed15 {
     fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type nfc_modulation = Struct_Unnamed15;
-#[repr(C)]
+#[repr(C, packed)]
 //#[derive(Copy, Clone)]
 pub struct Struct_Unnamed16 {
     pub nti: nfc_target_info,
