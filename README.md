@@ -39,10 +39,14 @@ fn main() {
          println!("libnfc version: {:?}", version);
     }
 }
-```    
+```
+## Crates Package
+
+https://crates.io/crates/nfc-sys
+
 ## Contributing
     
-I'm brand new to Rust so any help or constructive information would be really appreciated. Thanks in advance!    
+Check out the "issues" tab. Also, if you'd like to add any kind of improvement (or have a suggestion), I would be grateful! Thanks.   
     
 ## License
     
