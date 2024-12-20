@@ -2,12 +2,6 @@
 
 [![Crates.io](https://img.shields.io/crates/v/nfc-sys.svg?maxAge=2592000)](https://crates.io/crates/nfc-sys)
 
-## IMPORTANT - nfc-sys Crate Deprecated
-
-This crate has not had an update in many years; please use the [nfc1-sys](https://github.com/alexrsagen/rs-nfc1-sys) crate instead.
-
---- 
-
 `nfc-sys` provides FFI bindings to [libnfc](https://github.com/nfc-tools/libnfc).
 
 Following the `*-sys` package conventions, the `nfc-sys` package does not define higher-level abstractions over the native library; for a safe implementation, see [nfc](https://github.com/dsgriffin/nfc).
